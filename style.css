@@ -355,3 +355,10 @@ body {
         padding: 2rem 2rem 1.9rem 2rem;
     }
 }
+
+.typewriter {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ffe6f6;
+    min-height: 1.5em;
+}

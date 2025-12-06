@@ -80,3 +80,41 @@ function startElapsedTimer() {
 function pad2(num) {
     return String(num).padStart(2, "0");
 }
+
+function startTypewriter() {
+    const el = document.getElementById("typewriter");
+    if (!el) return;
+
+    const text = "Feliz aniversário meu amor";
+    let i = 0;
+
+    function type() {
+        if (i <= text.length) {
+            el.textContent = text.slice(0, i);
+            i++;
+            setTimeout(type, 60); // velocidade
+        }
+    }
+
+    type();
+}
+
+// chamar depois que o conteúdo principal aparecer:
+document.addEventListener("DOMContentLoaded", () => {
+    const openGiftBtn = document.getElementById("openGiftBtn");
+    const landing = document.getElementById("landing");
+    const mainContent = document.getElementById("mainContent");
+
+    if (openGiftBtn) {
+        openGiftBtn.addEventListener("click", () => {
+            landing.classList.add("hidden");
+            mainContent.classList.add("visible");
+            startElapsedTimer();
+            startTypewriter(); // <-- aqui
+        });
+    } else {
+        startElapsedTimer();
+        startTypewriter();
+    }
+});
+
