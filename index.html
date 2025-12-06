@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UM PRESENTE PRA VOCÊ</title>
+
+    <!-- Fonte Google (opcional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- TELA DO PRESENTE -->
+    <section class="landing" id="landing">
+        <div class="landing-content">
+            <h1>Um presente especial só pra você 🎁</h1>
+            <p>Clique no presente para abrir a surpresa.</p>
+            <br>
+
+            <button class="gift-box" id="openGiftBtn">
+                <!-- Se quiser usar um GIF real, troque a div pelo <img> abaixo -->
+                <!-- <img src="img/presente.gif" alt="Presente de aniversário" class="gift-gif" /> -->
+               <div class="gift-icon"></div>
+                <span class="gift-text">Abrir presente</span>
+            </button>
+
+            <small class="hint">Feito com muito amor e carinho, em cada detalhe por kauã rodrigues.</small>
+        </div>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content" id="mainContent">
+        <header class="top-header">
+            <h2>Feliz aniversário, meu amor</h2>
+            <p>
+                Este site é só um pouquinho de tudo o que eu sinto por você.  
+                Cada foto, cada palavra aqui foi pensada com carinho. <br> <br> PARA: ANA BEATRIZ
+            </p>
+        </header>
+
+        <!-- SEÇÃO FOTOS -->
+        <section class="section-card">
+            <h3>Nossas memórias em fotos</h3>
+            <p class="section-subtitle">
+                Algumas lembranças ao seu lado que eu mais amo. Estar com você sempre será o melhor momento do meu dia.
+            </p>
+
+            <div class="photo-gallery">
+                <!-- TODO: troque os src abaixo pelas fotos reais -->
+                <figure class="photo-item">
+                    <img src="img/foto1.jpg" alt="Nós dois 1" />
+                </figure>
+               <!-- <figure class="photo-item">
+                    <img src="img/foto2.jpg" alt="Nós dois 2" />
+                </figure> -->
+                <figure class="photo-item">
+                    <img src="img/foto3.jpg" alt="Nós dois 3" />
+                </figure>
+                <figure class="photo-item">
+                    <img src="img/foto4.jpg" alt="Nós dois 3" />
+                </figure>
+                <figure class="photo-item">
+                    <img src="img/foto5.jpg" alt="Nós dois 3" />
+                </figure>
+                <figure class="photo-item">
+                    <img src="img/foto6.jpg" alt="Nós dois 3" />
+                </figure>
+                <figure class="photo-item">
+                    <img src="img/foto7.jpg" alt="Nós dois 3" />
+                </figure>
+               <!-- <figure class="photo-item">
+                    <img src="img/foto8.jpg" alt="Nós dois 3" />
+                </figure> -->
+            </div>
+        </section>
+
+        <!-- SEÇÃO TEMPO JUNTOS -->
+        <section class="section-card">
+            <h3>Como é bom te amar. Já faz um tempo...</h3>
+            <p class="section-subtitle">
+                Desde o dia em que começamos a namorar, já se passaram:
+            </p>
+
+            <div class="time-grid">
+                <div class="time-pill">
+                    <span id="elapsedYears">0</span>
+                    <small>anos</small>
+                </div>
+                <div class="time-pill">
+                    <span id="elapsedMonths">0</span>
+                    <small>meses</small>
+                </div>
+                <div class="time-pill">
+                    <span id="elapsedDays">0</span>
+                    <small>dias</small>
+                </div>
+                <div class="time-pill">
+                    <span id="elapsedHours">00</span>
+                    <small>horas</small>
+                </div>
+                <div class="time-pill">
+                    <span id="elapsedMinutes">00</span>
+                    <small>min</small>
+                </div>
+                <div class="time-pill">
+                    <span id="elapsedSeconds">00</span>
+                    <small>seg</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DESCRIÇÃO DELA -->
+        <section class="section-card">
+            <h3>Sobre você</h3>
+
+            <div class="description-blocks">
+                <div class="description-item">
+                    <h4>O seu sorriso</h4>
+                    <p>
+                        O seu sorriso é a minha parte favorita de qualquer dia. Ele aparece e, de repente, tudo fica mais leve, mais bonito, mais simples. É o tipo de sorriso que não só ilumina o rosto, mas também acalma o coração de quem está por perto. Quando você sorri, eu esqueço os problemas, perco a noção do tempo e só penso em como tive sorte de encontrar alguém que transforma até os momentos mais comuns em algo especial. 
+                    </p>
+                </div>
+
+                <div class="description-item">
+                    <h4>O seu jeito</h4>
+                    <p>
+                        O seu jeito é a coisa mais leve e linda que já entrou na minha vida. Você consegue transformar qualquer momento simples em risada, conversa boa e sensação de paz. É descontraída, divertida, espontânea, dessas pessoas que a gente sente vontade de ter sempre por perto. Às vezes fica brava, fecha a cara, solta umas respostas atravessadas, mas até nisso você é encantadora, porque no fundo eu sei que é cuidado, é amor, é o seu jeito intenso de sentir tudo. Você consegue ser leve e profunda ao mesmo tempo, e é isso que faz eu me apaixonar por você todos os dias de novo.
+                    </p>
+                </div>
+
+                <div class="description-item">
+                    <h4>O que me tornei com você</h4>
+                    <p>
+                        Com você, eu me tornei uma versão muito melhor de mim mesmo. Aprendi a ser mais atencioso, a reparar nos detalhes, a ouvir de verdade e a cuidar de você com todo o carinho que merece. Me tornei mais amoroso, menos fechado, mais disposto a demonstrar o que sinto sem medo. Com o tempo, fui ficando mais dedicado, pensando em nós dois antes de qualquer decisão, querendo construir um futuro ao seu lado. Você também me ajudou a amadurecer, a enxergar a vida com mais responsabilidade, mas sem perder a leveza. Hoje eu sei que não sou o mesmo de antes: sou melhor, porque tenho você comigo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO MOTIVOS PARA AMAR -->
+        <section class="section-card">
+            <h3>Alguns motivos para amar você</h3>
+            <p class="section-subtitle">
+                Eu poderia ficar o dia todo escrevendo, mas separei alguns só para começar:
+            </p>
+
+            <ul class="reasons-list">
+                <!-- TODO: troque os itens por motivos reais, bem pessoais -->
+                <li>O jeito que você se preocupa comigo, mesmo nas pequenas coisas.</li>
+                <li>O seu abraço, que sempre parece o lugar mais seguro do mundo.</li>
+                <li>O seu sorriso quando está com vergonha e tenta disfarçar.</li>
+                <li>Como você acredita em nós dois, mesmo quando eu duvido de mim.</li>
+                <li>Sua felicidade espontânea que contagia todos que estão a sua volta.</li>
+                <li>Sua dedicação quando tem uma meta a cumprir.</li>
+                <li>Seu cabelo curto que me conquistou no primeiro momento em que te vi.</li>
+                <li>Seu amor pela cozinha e gastronomia que me rende refeições incriveis.</li>
+                <li>E todos os outros motivos que fazem você ser quem é, eu te amo muito do jeito que é &#x1F49D;</li>
+
+            </ul>
+        </section>
+
+        <footer class="site-footer">
+            <p>
+                Feito com muito amor para você. 
+                <span class="footer-heart">♥</span>
+            </p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
