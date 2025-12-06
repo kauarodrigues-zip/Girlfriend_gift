@@ -1,25 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const openGiftBtn = document.getElementById("openGiftBtn");
-    const landing = document.getElementById("landing");
-    const mainContent = document.getElementById("mainContent");
-
-    if (openGiftBtn) {
-        openGiftBtn.addEventListener("click", () => {
-            landing.classList.add("hidden");
-            mainContent.classList.add("visible");
-        });
-    }
-
-    startElapsedTimer();
-});
-
 /**
  * Inicia o contador de quanto tempo passou desde o pedido de namoro.
  */
 function startElapsedTimer() {
-    // TODO: AJUSTE A DATA (E HORA) REAL DO PEDIDO DE NAMORO
+    // 30/10/2022 às 22:00
     // new Date(ANO, MES-1, DIA, HORA, MINUTO, SEGUNDO)
-    // Exemplo: 10/03/2023 às 20:30 -> new Date(2023, 2, 10, 20, 30, 0);
     const startDate = new Date(2022, 10 - 1, 30, 22, 0, 0);
 
     const yearsSpan = document.getElementById("elapsedYears");
@@ -73,7 +57,7 @@ function startElapsedTimer() {
         if (secondsSpan) secondsSpan.textContent = pad2(seconds);
     }
 
-    update();               // primeira atualização imediata
+    update();                 // primeira atualização imediata
     setInterval(update, 1000); // atualiza a cada segundo
 }
 
@@ -92,29 +76,55 @@ function startTypewriter() {
         if (i <= text.length) {
             el.textContent = text.slice(0, i);
             i++;
-            setTimeout(type, 60); // velocidade
+            setTimeout(type, 60); // velocidade da digitação
         }
     }
 
     type();
 }
 
-// chamar depois que o conteúdo principal aparecer:
 document.addEventListener("DOMContentLoaded", () => {
     const openGiftBtn = document.getElementById("openGiftBtn");
     const landing = document.getElementById("landing");
     const mainContent = document.getElementById("mainContent");
+    const bgMusic = document.getElementById("bgMusic");
 
     if (openGiftBtn) {
         openGiftBtn.addEventListener("click", () => {
+            // Esconde a tela do presente e mostra o conteúdo
             landing.classList.add("hidden");
             mainContent.classList.add("visible");
+
+            // Inicia o contador e o efeito de digitação
             startElapsedTimer();
-            startTypewriter(); // <-- aqui
+            startTypewriter();
+
+            // Toca a música após a interação do usuário
+            if (bgMusic) {
+                try {
+                    bgMusic.volume = 0.6; // ajuste de volume (0.0 a 1.0)
+                    bgMusic.play().catch(() => {
+                        console.log("Navegador bloqueou autoplay do áudio.");
+                    });
+                } catch (e) {
+                    console.log("Erro ao tentar tocar a música:", e);
+                }
+            }
         });
     } else {
+        // Fallback caso um dia você remova a tela de presente
         startElapsedTimer();
         startTypewriter();
+
+        if (bgMusic) {
+            try {
+                bgMusic.volume = 0.6;
+                bgMusic.play().catch(() => {
+                    console.log("Navegador bloqueou autoplay do áudio.");
+                });
+            } catch (e) {
+                console.log("Erro ao tentar tocar a música:", e);
+            }
+        }
     }
 });
-
